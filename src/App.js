@@ -1,67 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
-import { Canvas, useFrame, useThree, extend } from 'react-three-fiber';
-import { useRef } from 'react';
-import { 
-  OrbitControls 
-} from 'three/examples/jsm/controls/OrbitControls';
-import * as THREE from 'three';
-
-extend({ OrbitControls });
-
-const Orbit = () => {
-  const { camera, gl } = useThree();
-  return (
-    <orbitControls args={[camera, gl.domElement]} />
-  )
-}
-
-const Box = props => {
-  const ref = useRef();
-  useFrame(state =>{
-    ref.current.rotation.y += 0.01;
-  })
-  return(
-    <mesh ref={ref} {...props} castShadow receiveShadow>
-      <boxBufferGeometry/>
-      <meshPhysicalMaterial color='blue' />
-    </mesh>
-  )
-}
-
-const Floor = props => {
-  return (
-    <mesh {...props} receiveShadow>
-      <boxBufferGeometry args={[20,1,10]}/>
-      <meshPhysicalMaterial/>
-    </mesh>
-  )
-}
-
-const Bulb = props => {
-  return (
-    <mesh {...props}>
-      <pointLight castShadow/>
-      <sphereBufferGeometry args={[0.2,20,10]}/>
-      <meshPhongMaterial emissive='yellow'/>
-    </mesh>
-  )
-}
+import { Canvas } from 'react-three-fiber';
+import { Suspense } from 'react';
+import Orbit from './components/Orbit';
+import Box from './components/Box';
+import Background from './components/Background';
+import Floor from './components/Floor';
+import Bulb from './components/Bulb';
+import ColorPicker from './components/ColorPicker';
+import Draggable from './components/Draggable';
 
 function App() {
-  
   return (
     <div style={{height: '100vh', width: '100vw'}}>
+      <ColorPicker/>
       <Canvas
+        shadowMap
         style={{background: 'black'}} 
-        camera={{ position: [1,5,1] }}
+        camera={{ position: [7,7,7] }}
       >
-        <fog attach='fog' args={['white',1,10]}/>
         <ambientLight intensity={0.2}/>
         <Bulb position={[0,3,0]}/>
         <Orbit />
         <axesHelper args={[5]}/>
-        <Box position={[0,1,0]}/>
+        <Draggable>
+          <Suspense fallback={null}>
+            <Box position={[-4,1,0]}/>
+          </Suspense>
+          <Suspense fallback={null}>
+            <Box position={[4,1,0]}/>
+          </Suspense>
+        </Draggable>
+        <Suspense fallback={null}>
+          <Background/>
+        </Suspense>
         <Floor position={[0,-0.5,0]}/>
       </Canvas>
     </div>
