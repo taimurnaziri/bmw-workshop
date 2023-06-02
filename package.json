@@ -2,7 +2,7 @@
   "name": "tesla-workshop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://{taimurnaziri}.github.io/{tesla-workshop}",
+  "homepage": "http://taimurnaziri.github.io/tesla-workshop",
   "dependencies": {
     "@react-three/cannon": "^6.5.2",
     "@react-three/fiber": "^8.13.0",
