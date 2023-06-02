@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/%7Btesla-workshop%7D/static/css/main.073c9b0a.css",
-    "main.js": "/%7Btesla-workshop%7D/static/js/main.60289edc.js",
-    "static/js/787.5c0a9efa.chunk.js": "/%7Btesla-workshop%7D/static/js/787.5c0a9efa.chunk.js",
-    "index.html": "/%7Btesla-workshop%7D/index.html",
-    "main.073c9b0a.css.map": "/%7Btesla-workshop%7D/static/css/main.073c9b0a.css.map",
-    "main.60289edc.js.map": "/%7Btesla-workshop%7D/static/js/main.60289edc.js.map",
-    "787.5c0a9efa.chunk.js.map": "/%7Btesla-workshop%7D/static/js/787.5c0a9efa.chunk.js.map"
+    "main.css": "/tesla-workshop/static/css/main.073c9b0a.css",
+    "main.js": "/tesla-workshop/static/js/main.56616530.js",
+    "static/js/787.5c0a9efa.chunk.js": "/tesla-workshop/static/js/787.5c0a9efa.chunk.js",
+    "index.html": "/tesla-workshop/index.html",
+    "main.073c9b0a.css.map": "/tesla-workshop/static/css/main.073c9b0a.css.map",
+    "main.56616530.js.map": "/tesla-workshop/static/js/main.56616530.js.map",
+    "787.5c0a9efa.chunk.js.map": "/tesla-workshop/static/js/787.5c0a9efa.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.60289edc.js"
+    "static/js/main.56616530.js"
   ]
 }
