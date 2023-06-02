@@ -2,7 +2,7 @@ import {
     DragControls 
 } from 'three/examples/jsm/controls/DragControls';
 import { useRef, useEffect, useState } from 'react';
-import { useThree, extend } from 'react-three-fiber';
+import { useThree, extend } from '@react-three/fiber';
 extend ({ DragControls });
 
 const Draggable = props => {

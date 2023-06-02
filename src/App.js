@@ -1,6 +1,6 @@
 import './App.css';
-import { Canvas } from 'react-three-fiber';
-import { Physics } from 'use-cannon';
+import { Canvas } from '@react-three/fiber';
+import { Physics } from '@react-three/cannon';
 import { Suspense } from 'react';
 import Orbit from './components/Orbit';
 import Box from './components/Box';

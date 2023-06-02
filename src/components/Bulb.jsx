@@ -1,4 +1,4 @@
-import { extend, useThree } from 'react-three-fiber';
+import { extend, useThree } from '@react-three/fiber';
 
 const Bulb = props => {
     return (
